@@ -10,6 +10,11 @@ public class ConnectManager : MonoBehaviourPunCallbacks
     [SerializeField] TMP_InputField usernameInput;
     [SerializeField] TMP_Text feedbackText;
 
+    private void Start()
+    {
+        usernameInput.text = PlayerPrefs.GetString(PropertyNames.Player.NickName, "");
+    }
+
     public void ClickConnect()
     {
         feedbackText.text = "";
@@ -21,6 +26,7 @@ public class ConnectManager : MonoBehaviourPunCallbacks
         }
 
         //simpan username
+        PlayerPrefs.SetString("PropertyNames.Player.NickName", usernameInput.text);
         PhotonNetwork.NickName = usernameInput.text;
         PhotonNetwork.AutomaticallySyncScene = true;
 
@@ -34,6 +40,16 @@ public class ConnectManager : MonoBehaviourPunCallbacks
     {
         Debug.Log("Connected to master");
         feedbackText.text = "Connected to Master";
+        StartCoroutine(LoadLevelAfterConnectedAndReady());
+    }
+
+    IEnumerator LoadLevelAfterConnectedAndReady()
+    {
+        while (PhotonNetwork.IsConnectedAndReady == false)
+        {
+            yield return null;
+        }
+
         SceneManager.LoadScene("Lobby");
     }
 }

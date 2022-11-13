@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    public void LoadScene(int sceneIndex)
+    public void LoadScene(string levelName)
     {
-        Debug.Log("Changing to Scene " + sceneIndex);
-        SceneManager.LoadScene(sceneIndex);
+        Debug.Log("Changing to Scene " + levelName);
+        SceneManager.LoadScene(levelName);
     }
 
     public void QuitGame()

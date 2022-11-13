@@ -12,7 +12,7 @@ public class Card : MonoBehaviour
     public Vector2 OriginalPos;
     Vector2 OriginalScale;
     Color OriginalColor;
-    bool IsClickable = true;
+    bool isClickable = true;
 
     private void Start()
     {
@@ -24,7 +24,11 @@ public class Card : MonoBehaviour
 
     public void OnClick()
     {
-        player.SetchosenCard(this);
+        if (isClickable)
+        {
+            player.SetchosenCard(this);
+        }
+
 
     }
 
@@ -36,6 +40,6 @@ public class Card : MonoBehaviour
 
     public void SetClikable(bool value)
     {
-        IsClickable = value;
+        isClickable = value;
     }
 }

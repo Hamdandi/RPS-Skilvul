@@ -9,9 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuScene.unity
     guid: 72f34192c864ebd42be51596021d82b2
   - enabled: 1
-    path: Assets/Scenes/Gameplay.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/Lobby.unity
     guid: 3638afcdf8596554ab18f213b3d91c2b
+  - enabled: 1
+    path: Assets/Scenes/GamePlayCard.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/GamePlayCardBot.unity
+    guid: e5cb851ffeb5e664aa0024454dfd44d5
+  - enabled: 0
+    path: Assets/Scenes/GamePlayShooter.unity
+    guid: 0eab8d083ff8be14ebcfb7a24ff82fdd
   m_configObjects: {}
