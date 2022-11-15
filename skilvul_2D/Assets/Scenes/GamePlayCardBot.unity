@@ -3104,6 +3104,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abc6e504a0c1d764ea39498ee8b91198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1428313088
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1428313090}
+  - component: {fileID: 1428313089}
+  m_Layer: 0
+  m_Name: UGS
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1428313089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428313088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af50dfd629d888d4c9e914a9390be02e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  environmentName: production
+--- !u!4 &1428313090
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428313088}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 408.75027, y: 1083.2705, z: -7.7316523}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1482633438
 GameObject:
   m_ObjectHideFlags: 0
@@ -3306,7 +3351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bot: {fileID: 1490192828}
-  selectedDifficulty: 3
+  selectedDifficulty: 0
   botDifficulties:
   - Name: Easy
     ChoosingInterval: 0.5
@@ -3328,6 +3373,8 @@ MonoBehaviour:
     MaxHealth: 500
     RestoreValue: 50
     DamageValue: 50
+  enableRemoteCongifg: 1
+  difficultyKey: Difficulty
 --- !u!1 &1513006825
 GameObject:
   m_ObjectHideFlags: 0
